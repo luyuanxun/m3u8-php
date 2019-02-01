@@ -2,8 +2,9 @@ version: '3.1'
 services:
   alphp:
     image: swoft/alphp:cli
-    working_dir: /data/
+    working_dir: /var/www
     container_name: m3u8-down
     command: php index.php
     volumes:
-      - ./:/data/
+      - ./:/var/www
+    #tty: true
