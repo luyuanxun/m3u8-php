@@ -101,11 +101,12 @@ function co_curl($url, $cookies = '', $data = array(), $userHeaders = array(), $
         ];
         if ($userHeaders) {
             $headers = array_merge($headers, $userHeaders);
-            $headers = $userHeaders;
         }
+
         if ($cookies) {
             $headers['Cookie'] = $cookies;
         }
+
         $cli->setHeaders($headers);
         $cli->set(['timeout' => 60]);
         if ($data) {
